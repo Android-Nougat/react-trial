@@ -16,7 +16,9 @@ const h=` country(name: "India") {
 
        historical(reverse: true, count: 30) {
       date
-      cases
+      todayCases
+      todayRecovered
+      todayDeaths
     }
   
   }`
@@ -58,9 +60,9 @@ return(
 
   <tr>
     <th>State</th>
-    <th>Cases</th>
-    <th>Deaths</th>
-    <th>Recovered</th>
+    <th style={{background:"orange"}}>Cases</th>
+    <th style={{background:"red"}}>Deaths</th>
+    <th style={{background:"green"}}>Recovered</th>
   </tr>
 
 
@@ -85,16 +87,18 @@ return(
     }
        historical(reverse: true, count: 30) {
       date
-      cases
+      todayCases
+      todayRecovered
+      todayDeaths
     }
 
   }`)
    setCase(false)
-    alert(cntry)
+    
   }}>{currentCourse.state==="State Unassigned"?"Uttar Pradesh":currentCourse.state}</td>
-    <td>{currentCourse.cases}</td>
-    <td>{currentCourse.deaths}</td>
-  <td>{currentCourse.recovered}</td>
+    <td  style={{background:"orange"}}>{currentCourse.cases}</td>
+    <td style={{background:"red"}}>{currentCourse.deaths}</td>
+  <td style={{background:"green"}}>{currentCourse.recovered}</td>
 </tr>
 ))}</table>
 
@@ -114,7 +118,7 @@ return(
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error :(</p>;
-     console.log(data)
+
       
 
   return(
@@ -124,22 +128,23 @@ return(
     setCount(h)
     }
     
-    }>State wise figure
+    }>Nation wide statistics
 
 
     <Trial data={data.state.historical}/>
+   
     <table>
 
   <tr>
-    <th>State</th>
-    <th>Cases</th>
-    <th>Deaths</th>
+    <th >State</th>
+    <th  style={{background:"orange"}}>Cases</th>
+    <th  style={{background:"red"}}>Deaths</th>
 
   </tr>
   <tr>
-<td>{data.state.state}</td>
-<td>{data.state.cases}</td>
-<td>{data.state.deaths}</td>
+<td  >{data.state.state}</td>
+<td  style={{background:"orange"}}>{data.state.cases}</td>
+<td  style={{background:"red"}}>{data.state.deaths}</td>
   </tr>
   
 
@@ -149,23 +154,9 @@ return(
 
 <tr>
 
-<td onClick={
-  
-  ()=>{
-
-    alert(cntry);
-    setCount(`  state(countryName: "India", stateName: "${currentCourse.state}") {
-    state
-    cases
-    deaths
-    districts {
-      district
-      cases
-      deaths
-    }
-  }`)}}>{currentCourse.district}</td>
-    <td>{currentCourse.cases}</td>
-    <td>{currentCourse.deaths}</td>
+<td  >{currentCourse.district}</td>
+    <td  style={{background:"orange"}}>{currentCourse.cases}</td>
+    <td  style={{background:"red"}}>{currentCourse.deaths}</td>
 
 </tr>
 ))}</table>

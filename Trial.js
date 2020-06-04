@@ -18,7 +18,7 @@ const state = {
 
       backgroundColor: 'transparent',
 
-      borderColor: 'rgba(0,0,0,1)',
+      borderColor: 'white',
 
       borderWidth: 1,
 
@@ -47,9 +47,10 @@ componentDidMount(){
 
 }
   render() {
+    console.log(this.props.data)
     const g=this.props.data.map(q=>{
   return(
-    Number(q.cases)
+    Number(q.todayCases)
   )
 })
   const z=this.props.data.map(q=>{
@@ -69,7 +70,7 @@ console.log(z)
           options={{
             title:{
               display:true,
-              text:'Average Rainfall per month',
+              text:'Covid cases per day',
               fontSize:20
             },
             legend:{
