@@ -38,11 +38,12 @@ const Symptoms=()=>{
 
 </div>
 <article className="cards" ><h6>If you are experiencing these symptoms..</h6>
-<p>Contact the national helpline number</p><br/>
-<a href="tel:+91-11-23978046">+91-11-23978046</a>
 <br/>
-Contact the national helpline mailto<br/>
-<a href="mailto:ncov2019@gov.in">ncov2019@gov.in</a>
+<p>Contact the national helpline number<br/> <a href="tel:+91-11-23978046">+91-11-23978046</a></p><br/>
+
+<br/>
+<p>Contact the national helpline mailto<br/><a href="mailto:ncov2019@gov.in">ncov2019@gov.in</a></p>
+
 <br/>
 </article>
     </div>
