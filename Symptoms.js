@@ -5,7 +5,7 @@ const Symptoms=()=>{
 
   return(
     <div className="container">
-<div c style={{background:"green",color:"white"}}>
+<div className="cards" style={{color:"white"}}>
 <ul>
 <h3>Most common symptoms:</h3>
 <li>Fever</li>
