@@ -5,18 +5,18 @@ const Symptoms=()=>{
 
   return(
     <div className="container">
-    <h3>Symptoms</h3>
-    <hr/>
+    
+    
 <div className="cards" style={{color:"white"}}>
-<ul>
-<h3>Most common symptoms:</h3>
+<ul style={{background:"yellow"}}>
+<h3 >Most common symptoms:</h3>
 <li>Fever</li>
 <li>Cough</li>
 <li>Tiredness</li>
 </ul>
 </div>
 <div className="cards" >
-<ul style={{background:"yellow"}}>
+<ul style={{background:"orange"}}>
 <h3>Less common symptoms:</h3>
 <li>Aches and pain</li>
 <li>Sore throat</li>

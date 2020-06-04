@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Symptoms from './Symptoms'
 function About (){
 
 return (
@@ -18,7 +18,11 @@ return (
  </div>
 <article >Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.</article>
       <iframe  style={{width:"60%",height:"80vh",marginLeft:"10%"}}src="https://www.youtube.com/embed/OZcRD9fV7jo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </h3>
+<h1>Symptoms</h1>
+<hr/>
+<Symptoms/>
 <h1>Myths</h1>
 <hr/>
 <br/>

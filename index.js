@@ -29,15 +29,14 @@ const App = () =>
       
 <nav style={{display:"flex",justifyContent:"flex-end"}}>
 
-<Link className="nav" to="/symptoms" style={{underline:"none"} } style={st}>Symptoms</Link>
+
 <Link className="nav" to="/precautions" style={{underline:"none"} } style={st}>Precautions</Link>
 <Link className="nav" to="/about" style={{underline:"none"} } style={st}>About</Link>
 <Link className="nav" to="/statistics" style={{underline:"none"} } style={st}>Statistics</Link>
 </nav>
 <Switch>
 
-<Route exact path="/home" component={Hello} />
-<Route path="/symptoms" component={Symptoms}/>
+
 <Route path="/precautions" component={Precautions}/>
 <Route path="/about" component={About}/>
 
