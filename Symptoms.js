@@ -5,6 +5,8 @@ const Symptoms=()=>{
 
   return(
     <div className="container">
+    <h3>Symptoms</h3>
+    <hr/>
 <div className="cards" style={{color:"white"}}>
 <ul>
 <h3>Most common symptoms:</h3>
@@ -13,8 +15,8 @@ const Symptoms=()=>{
 <li>Tiredness</li>
 </ul>
 </div>
-<div className="cards" style={{background:"yellow"}}>
-<ul >
+<div className="cards" >
+<ul style={{background:"yellow"}}>
 <h3>Less common symptoms:</h3>
 <li>Aches and pain</li>
 <li>Sore throat</li>
@@ -27,8 +29,8 @@ const Symptoms=()=>{
 
 </div>
 
-<div className="cards" style={{background:"red",color:"white"}}>
-<ul>
+<div className="cards" >
+<ul style={{background:"red",color:"white"}}>
 <h3>Serious symptoms:</h3>
 <li>difficulty breathing or shortness of breath.</li>
 <li>chest pain or pressure.</li>
