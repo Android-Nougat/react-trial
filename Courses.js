@@ -56,6 +56,11 @@ return(
       
     <div>
   <Trial data={data.country.historical}/></div>
+  <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)"}}>
+<div className="cards">{data.country.historical[0].todayCases}<h2 style={{background:"orange"}}>Reported</h2></div>
+<div className="cards">{data.country.historical[0].todayDeaths}<h2 style={{background:"red"}}>Deaths</h2></div>
+<div className="cards">{data.country.historical[0].todayRecovered}<h2 style={{background:"green"}}>Cured</h2></div>
+  </div>
     <table>
 
   <tr>
@@ -132,6 +137,11 @@ return(
 
 
     <Trial data={data.state.historical}/>
+<div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)"}}>
+    <div className="cards">{data.state.historical[0].todayCases}<h2 style={{background:"orange"}}>Reported</h2></div>
+<div className="cards">{data.state.historical[0].todayDeaths}<h2 style={{background:"red"}}>Deaths</h2></div>
+<div className="cards">{data.state.historical[0].todayRecovered}<h2 style={{background:"green"}}>Cured</h2></div>
+  </div>
    
     <table>
 
