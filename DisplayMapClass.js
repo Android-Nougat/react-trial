@@ -38,7 +38,7 @@ addInfoBubble=(map) =>{
 
     const H = window.H;
     const platform = new H.service.Platform({
-        apikey: "I_HQ9aC6cY0NzNdNcE072O3d-5iHOgTKU14SbT0YmEI"
+        apikey: "cnZcFjVRvgIoYcmGQDjPhBTVheJtnJNaxMgpNSg8PqQ"
     });
 
     const defaultLayers = platform.createDefaultLayers();
