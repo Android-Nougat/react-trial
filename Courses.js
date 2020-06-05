@@ -76,6 +76,7 @@ return(
 
 <tr>
 
+{currentCourse.state!=="State Unassigned" ?[
 <td onClick={
   
   ()=>{
@@ -100,10 +101,12 @@ return(
   }`)
    setCase(false)
     
-  }}>{currentCourse.state==="State Unassigned"?"Uttar Pradesh":currentCourse.state}</td>
-    <td  style={{background:"orange"}}>{currentCourse.cases}</td>
-    <td style={{background:"red"}}>{currentCourse.deaths}</td>
+  }}>{currentCourse.state!=="State Unassigned" && currentCourse.state}</td>,
+    <td  style={{background:"orange"}}>{currentCourse.cases}</td>,
+    <td style={{background:"red"}}>{currentCourse.deaths}</td>,
   <td style={{background:"green"}}>{currentCourse.recovered}</td>
+]:null}
+
 </tr>
 ))}</table>
 
