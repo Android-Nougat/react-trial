@@ -3,16 +3,20 @@ import React, { useState, useEffect } from 'react';
 import { Query } from "react-apollo";
 import Course from './Course';
 import gql from "graphql-tag";
-import Trial from './Trial'
+import Trial from './Trial';
+import CountUp from 'react-countup';
 import Hello from './Hello'
 import DisplayMapClass from './DisplayMapClass'
-const h=` country(name: "India") {
+const h=` country(name: "India") 
+
+{
     states {
       state
       cases
       deaths
       recovered
     }
+    tests
 
        historical(reverse: true, count: 30) {
       date
@@ -60,6 +64,13 @@ return(
 <div className="cards">{data.country.historical[0].todayCases}<h2 style={{background:"orange"}}>Reported</h2></div>
 <div className="cards">{data.country.historical[0].todayDeaths}<h2 style={{background:"red"}}>Deaths</h2></div>
 <div className="cards">{data.country.historical[0].todayRecovered}<h2 style={{background:"green"}}>Cured</h2></div>
+<CountUp start={0} end={data.country.tests} delay={0}>
+  {({ countUpRef }) => (
+    <div>
+      <span ref={countUpRef} />
+    </div>
+  )}
+</CountUp>
   </div>
     <table>
 
@@ -85,6 +96,7 @@ return(
     state
     cases
     deaths
+    tests
     districts {
       district
       cases
@@ -142,6 +154,14 @@ return(
     <div className="cards">{data.state.historical[0].todayCases}<h2 style={{background:"orange"}}>Reported</h2></div>
 <div className="cards">{data.state.historical[0].todayDeaths}<h2 style={{background:"red"}}>Deaths</h2></div>
 <div className="cards">{data.state.historical[0].todayRecovered}<h2 style={{background:"green"}}>Cured</h2></div>
+<h1><CountUp className="" start={0} end={data.state.tests} delay={5} duration={40000}>
+  {({ countUpRef }) => (
+    <div>
+      <span ref={countUpRef} />
+    </div>
+  )}
+</CountUp></h1>
+
   </div>
    
     <table>
